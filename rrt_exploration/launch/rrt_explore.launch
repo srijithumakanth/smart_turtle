@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Srijith_bot complete localization package -->
+<launch>
+
+  <!-- Turtlebot3 bringup -->
+  <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
+
+  <!-- Realsense T265 launch -->
+  <!-- <include file="$(find realsense2_camera)/launch/rs_t265.launch"/> -->
+
+   <!-- Realsense D435 launch -->
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+
+  <!-- RTAB Mapping Launch -->
+  <include file="$(find rtab_slam)/launch/mapping.launch"/> 
+  
+  <!-- RRT Exploration Launch -->
+  <include file="$(find rrt_exploration)/launch/rrt_turtlebot3.launch"/>
+
+</launch>
+
