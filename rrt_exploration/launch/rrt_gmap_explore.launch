@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Srijith_bot complete localization package -->
 <launch>
 
   <!-- Turtlebot3 bringup -->
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
 
   <!-- Realsense T265 launch -->
-  <!-- <include file="$(find realsense2_camera)/launch/rs_t265.launch"/> -->
+  <!-- include file="$(find realsense2_camera)/launch/rs_t265.launch"/ -->
 
    <!-- Realsense D435 launch -->
-  <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+  <!-- include file="$(find realsense2_camera)/launch/rs_camera.launch"/ -->
 
   <!-- gmapping launch -->
   <node pkg="gmapping" type="slam_gmapping" name="gmap_slam" output="screen">
   <param name="scan" value="scan"/>
   </node> 
   
-  <!-- RRT Exploration Launch -->
+  <!-- move_base launch -->
+  <include file="$(find turtlebot3_navigation)/launch/move_base.launch"/>
+
+  <!-- RRT Exploration setup launch -->
   <include file="$(find rrt_exploration)/launch/rrt_setup.launch"/>
 
 </launch>
