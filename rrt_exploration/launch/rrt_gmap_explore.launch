@@ -8,7 +8,7 @@
      <!-- move_base launch -->
      <include file="$(find turtlebot3_navigation)/launch/move_base_rrt.launch">
         <arg name="namespace" value="robot_1"/>
-     <include/>
+     </include>
   </group>
 
   <!-- Realsense T265 launch -->
