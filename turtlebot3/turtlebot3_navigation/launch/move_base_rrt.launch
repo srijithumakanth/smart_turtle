@@ -6,7 +6,7 @@
   <arg name="odom_topic" default="odom" />
   <arg name="move_forward_only" default="false"/>
 
-  <arg name="namespace" default="" />
+  <arg name="namespace"/>
 
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
@@ -23,16 +23,16 @@
 
     <!-- ############################################################ -->
 
-    <param name="global_costmap/global_frame" value="map"/>
-    <param name="global_costmap/robot_base_frame" value="base_footprint"/>
-    <param name="global_costmap/laser_scan_sensor/sensor_frame" value="base_scan"/>
+    <param name="global_costmap/global_frame" value="$(arg namespace)/map"/>
+    <param name="global_costmap/robot_base_frame" value="$(arg namespace)/base_footprint"/>
+    <param name="global_costmap/laser_scan_sensor/sensor_frame" value="$(arg namespace)/base_scan"/>
 
-    <param name="global_costmap/laser_scan_sensor/topic" value="/scan"/>    
-    <param name="local_costmap/global_frame" value="odom"/>
-    <param name="local_costmap/robot_base_frame" value="base_footprint"/>
-    <param name="local_costmap/laser_scan_sensor/sensor_frame" value="base_scan"/>
-    <param name="local_costmap/laser_scan_sensor/topic" value="/scan"/>
-    <param name="local_costmap/obstacle_layer/laser_scan_sensor/topic" value="/scan"/>
+    <param name="global_costmap/laser_scan_sensor/topic" value="/$(arg namespace)/scan"/>    
+    <param name="local_costmap/global_frame" value="$(arg namespace)/odom"/>
+    <param name="local_costmap/robot_base_frame" value="$(arg namespace)/base_footprint"/>
+    <param name="local_costmap/laser_scan_sensor/sensor_frame" value="/$(arg namespace)/base_scan"/>
+    <param name="local_costmap/laser_scan_sensor/topic" value="/$(arg namespace)/scan"/>
+    <param name="local_costmap/obstacle_layer/laser_scan_sensor/topic" value="/$(arg namespace)/scan"/>
     
   </node>
 </launch>
