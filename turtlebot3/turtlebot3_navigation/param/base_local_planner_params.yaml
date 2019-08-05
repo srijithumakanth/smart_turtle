@@ -18,6 +18,8 @@ TrajectoryPlannerROS:
 
 # Differential-drive robot configuration
   holonomic_robot: false
+  #recovery_behavior_enabled: false
+
 
 # Forward Simulation Parameters
   sim_time: 0.8
