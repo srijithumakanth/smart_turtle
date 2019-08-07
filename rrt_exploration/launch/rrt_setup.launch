@@ -5,7 +5,7 @@
 <arg name="eta" value="1.0"/>
 <arg name="Geta" value="15.0"/>
 <arg name="Map" value="/robot_1/map"/>
-<arg name="namespace" value="/robot_1"/>
+<arg name="namespace" value="robot_1"/>
 
 
   <node pkg="rrt_exploration" type="global_rrt_detector" name="global_detector" output="screen">
