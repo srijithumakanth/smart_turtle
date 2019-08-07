@@ -18,13 +18,13 @@
   <!-- include file="$(find realsense2_camera)/launch/rs_camera.launch"/ -->
 
   <!-- gmapping launch -->
-  <arg name="namespace" value="robot_1"/>
+  <arg name="namespace" value="/robot_1"/>
 
   <node pkg="gmapping" type="slam_gmapping" name="gmap_slam" output="screen">
     <param name="scan" value="scan"/>
-    <param name="map_frame" value="/$(arg namespace)/map"/>
-    <param name="odom_frame" value="$/(arg namespace)/odom"/>
-    <param name="base_frame" value="/$(arg namespace)/base_footprint"/>
+    <param name="map_frame" value="$(arg namespace)/map"/>
+    <param name="odom_frame" value="$(arg namespace)/odom"/>
+    <param name="base_frame" value="$(arg namespace)/base_footprint"/>
     
     <param name="map_update_interval" value="2.0"/>
     <param name="maxUrange" value="50.0"/>
