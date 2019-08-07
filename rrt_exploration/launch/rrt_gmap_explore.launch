@@ -19,9 +19,9 @@
 
   <!-- gmapping launch -->
   <arg name="namespace" value="robot_1"/>
-  
+
   <node pkg="gmapping" type="slam_gmapping" name="gmap_slam" output="screen">
-    <param name="scan" value="$(arg namespace)/scan"/>
+    <param name="scan" value="scan"/>
     <param name="map_frame" value="$(arg namespace)/map"/>
     <param name="odom_frame" value="$(arg namespace)/odom"/>
     <param name="base_frame" value="$(arg namespace)/base_link"/>
