@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   
-  <!-- group ns="/robot_1" -->
+  <group ns="/robot_1">
 
      <!-- Turtlebot3 bringup -->
      <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
      <!-- move_base launch -->
      <include file="$(find turtlebot3_navigation)/launch/move_base_rrt.launch">
-        <!--arg name="namespace" value="robot_1"/-->
+        <arg name="namespace" value="robot_1"/>
      </include>
-  <!-- /group -->
+  </group>
 
   <!-- Realsense T265 launch -->
   <!-- include file="$(find realsense2_camera)/launch/rs_t265.launch"/ -->
