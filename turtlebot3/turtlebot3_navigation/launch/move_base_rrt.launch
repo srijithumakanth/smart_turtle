@@ -61,10 +61,13 @@
         <param name="global_costmap/global_frame" value="$(arg namespace)/map"/>
         <param name="global_costmap/robot_base_frame" value="$(arg namespace)/base_footprint"/>
         <param name="global_costmap/laser_scan_sensor/sensor_frame" value="$(arg namespace)/base_scan"/>
+        
         <param name="global_costmap/laser_scan_sensor/topic" value="/$(arg namespace)/base_scan"/>    
+        
         <param name="local_costmap/global_frame" value="$(arg namespace)/odom"/>
         <param name="local_costmap/robot_base_frame" value="$(arg namespace)/base_footprint"/>
         <param name="local_costmap/laser_scan_sensor/sensor_frame" value="$(arg namespace)/base_scan"/>
+        
         <param name="local_costmap/laser_scan_sensor/topic" value="/$(arg namespace)/scan"/>
         <param name="local_costmap/obstacle_layer/laser_scan_sensor/topic" value="/$(arg namespace)/scan"/>
     </node>

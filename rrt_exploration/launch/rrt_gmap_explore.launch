@@ -7,7 +7,7 @@
      <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
      <!-- move_base launch -->
      <include file="$(find turtlebot3_navigation)/launch/move_base_rrt.launch">
-        <arg name="namespace" value="/robot_1"/>
+        <arg name="namespace" value="robot_1"/>
      </include>
   </group>
 
@@ -18,7 +18,7 @@
   <!-- include file="$(find realsense2_camera)/launch/rs_camera.launch"/ -->
 
   <!-- gmapping launch -->
-  <arg name="namespace" value="/robot_1"/>
+  <arg name="namespace" value="robot_1"/>
 
   <node pkg="gmapping" type="slam_gmapping" name="gmap_slam" output="screen">
     <param name="scan" value="scan"/>
