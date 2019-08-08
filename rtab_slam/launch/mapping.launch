@@ -6,7 +6,7 @@
   <arg name="rgb_topic"   default="/camera/color/image_raw"/>
   <arg name="depth_topic" default="/camera/depth/image_rect_raw"/>
   <arg name="camera_info_topic" default="/camera/color/camera_info"/>
-  <arg name="laser_scan_topic" default="/scan"/>  
+  <arg name="laser_scan_topic" default="/robot_1/scan"/>  
 
 
   <!-- Mapping Node -->
@@ -27,7 +27,7 @@
         <remap from="rgb/camera_info" to="$(arg camera_info_topic)"/>
 
         <!-- RTAB-Map Output -->
-        <remap from="grid_map" to="/map"/>
+        <remap from="grid_map" to="/robot_1/map"/>
 
            <!-- Rate (Hz) at which new nodes are added to map -->
       <param name="Rtabmap/DetectionRate" type="string" value="1"/> 
