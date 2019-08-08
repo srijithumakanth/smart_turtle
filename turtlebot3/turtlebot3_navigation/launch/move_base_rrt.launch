@@ -2,8 +2,8 @@
   <!-- Arguments -->
   <arg name="model" default="burger"/>
   <!-- arg name="cmd_vel_topic" default="mobile_base/commands/velocity" /-->
-  <arg name="cmd_vel_topic" default="/cmd_vel"/>
-  <arg name="odom_topic" default="/odom" />
+  <arg name="cmd_vel_topic" default="/robot_1/cmd_vel"/>
+  <arg name="odom_topic" default="/robot_1/odom" />
   <arg name="move_forward_only" default="false"/>
 
   <!-- arg name="namespace"/ -->
@@ -89,7 +89,7 @@
         <param name="oscillation_distance" value="0.5" />
         <param name="planner_patience" value="1" />
         <param name="controller_patience" value="1" /> 
-        <remap from="cmd_vel" to="/cmd_vel"/>
+        <remap from="cmd_vel" to="/robot_1/cmd_vel"/>
         <remap from="odom" to="$(arg odom_topic)"/>
         <param name="recovery_behavior_enabled" value="false" />
         
