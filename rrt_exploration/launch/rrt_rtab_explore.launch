@@ -9,7 +9,9 @@
     <!-- <include file="$(find realsense2_camera)/launch/rs_t265.launch"/> -->
 
     <!-- Realsense D435 launch -->
-    <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+      <arg name="camera" value="robot_1/camera"/>
+    </include>
 
     <!-- RTAB Mapping Launch -->
     <include file="$(find rtab_slam)/launch/mapping.launch"/> 
