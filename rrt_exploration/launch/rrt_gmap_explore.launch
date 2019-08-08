@@ -4,7 +4,7 @@
   <group ns="/robot_1">
 
      <!-- Turtlebot3 bringup -->
-     <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/>
+     <!-- include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"/ -->
      <!-- move_base launch -->
      <include file="$(find turtlebot3_navigation)/launch/move_base_rrt.launch">
         <arg name="namespace" value="robot_1"/>
