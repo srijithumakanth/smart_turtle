@@ -10,7 +10,7 @@
 
     <!-- Realsense D435 launch -->
     <include file="$(find realsense2_camera)/launch/rs_camera.launch">
-      <arg name="tf_prefix" value="/robot_1"/>
+      <arg name="tf_prefix" value="/robot_1/camera"/>
     </include>
 
     <!-- RTAB Mapping Launch -->
