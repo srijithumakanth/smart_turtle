@@ -10,7 +10,6 @@ Panels:
         - /Axes1
         - /LaserScan1
         - /RobotModel1
-        - /RobotModel1/Status1
         - /TF1
       Splitter Ratio: 0.466926068
     Tree Height: 745
@@ -120,6 +119,34 @@ Visualization Manager:
           Value: true
         robot_1/base_scan:
           Value: true
+        robot_1/camera_bottom_screw_frame:
+          Value: true
+        robot_1/camera_color_frame:
+          Value: true
+        robot_1/camera_color_optical_frame:
+          Value: true
+        robot_1/camera_depth_frame:
+          Value: true
+        robot_1/camera_depth_optical_frame:
+          Value: true
+        robot_1/camera_infra1_frame:
+          Value: true
+        robot_1/camera_infra1_optical_frame:
+          Value: true
+        robot_1/camera_infra2_frame:
+          Value: true
+        robot_1/camera_infra2_optical_frame:
+          Value: true
+        robot_1/camera_left_ir_frame:
+          Value: true
+        robot_1/camera_left_ir_optical_frame:
+          Value: true
+        robot_1/camera_link:
+          Value: true
+        robot_1/camera_right_ir_frame:
+          Value: true
+        robot_1/camera_right_ir_optical_frame:
+          Value: true
         robot_1/caster_back_link:
           Value: true
         robot_1/imu_link:
@@ -144,6 +171,26 @@ Visualization Manager:
               robot_1/base_link:
                 robot_1/base_scan:
                   {}
+                robot_1/camera_bottom_screw_frame:
+                  robot_1/camera_link:
+                    robot_1/camera_color_frame:
+                      robot_1/camera_color_optical_frame:
+                        {}
+                    robot_1/camera_depth_frame:
+                      robot_1/camera_depth_optical_frame:
+                        {}
+                      robot_1/camera_left_ir_frame:
+                        robot_1/camera_left_ir_optical_frame:
+                          {}
+                      robot_1/camera_right_ir_frame:
+                        robot_1/camera_right_ir_optical_frame:
+                          {}
+                    robot_1/camera_infra1_frame:
+                      robot_1/camera_infra1_optical_frame:
+                        {}
+                    robot_1/camera_infra2_frame:
+                      robot_1/camera_infra2_optical_frame:
+                        {}
                 robot_1/caster_back_link:
                   {}
                 robot_1/imu_link:
@@ -260,11 +307,31 @@ Visualization Manager:
         markers: true
       Queue Size: 100
       Value: true
+    - Alpha: 0.699999988
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Global costmap
+      Topic: /robot_1/move_base_node/global_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
+    - Alpha: 0.699999988
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Local costmap
+      Topic: /robot_1/move_base_node/local_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 108; 108; 108
     Default Light: true
-    Fixed Frame: robot_1/base_link
+    Fixed Frame: robot_1/map
     Frame Rate: 30
   Name: root
   Tools:
@@ -285,15 +352,15 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 11.1501894
+      Distance: 4.05757427
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.218969077
-        Y: -4.3537674
+        X: 0.66051954
+        Y: -1.6569736
         Z: -4.76837158e-07
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.0500000007
