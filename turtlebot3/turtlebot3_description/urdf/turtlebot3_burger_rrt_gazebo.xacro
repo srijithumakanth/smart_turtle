@@ -50,7 +50,7 @@
   <gazebo>
     <plugin name="turtlebot3_burger_controller" filename="libgazebo_ros_diff_drive.so">
       <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
+      <odometryTopic>robot_1/odom</odometryTopic>
       <odometryFrame>robot_1/odom</odometryFrame>
       <odometrySource>world</odometrySource>
       <publishOdomTF>true</publishOdomTF>
@@ -75,7 +75,7 @@
       <alwaysOn>true</alwaysOn>
       <bodyName>robot_1/imu_link</bodyName>
       <frameName>robot_1/imu_link</frameName>
-      <topicName>imu</topicName>
+      <topicName>robot_1/imu</topicName>
       <serviceName>imu_service</serviceName>
       <gaussianNoise>0.0</gaussianNoise>
       <updateRate>200</updateRate>
@@ -126,7 +126,7 @@
         </noise>
       </ray>
       <plugin name="gazebo_ros_lds_lfcd_controller" filename="libgazebo_ros_laser.so">
-        <topicName>scan</topicName>
+        <topicName>robot_1/scan</topicName>
         <frameName>robot_1/base_scan</frameName>
       </plugin>
     </sensor>
