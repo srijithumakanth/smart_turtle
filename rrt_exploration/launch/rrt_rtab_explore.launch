@@ -17,7 +17,7 @@
     <include file="$(find rtab_slam)/launch/mapping.launch"/> 
     
     <!-- RRT Exploration Launch -->
-    <include file="$(find rrt_exploration)/launch/rrt_setup.launch"/>
+    <!-- include file="$(find rrt_exploration)/launch/rrt_setup.launch"/ -->
   </group>
 </launch>
 
