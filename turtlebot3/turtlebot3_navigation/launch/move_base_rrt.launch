@@ -1,6 +1,6 @@
 <launch>
   <!-- Arguments -->
-  <arg name="model" default="burger"/>
+  <!-- arg name="model" default="burger"/ -->
   <!-- arg name="cmd_vel_topic" default="mobile_base/commands/velocity" /-->
   <arg name="cmd_vel_topic" default="/robot_1/cmd_vel"/>
   <arg name="odom_topic" default="/robot_1/odom" />
