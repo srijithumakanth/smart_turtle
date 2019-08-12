@@ -3,6 +3,7 @@
   
   <group ns="/robot_1">
   <arg name="namespace" value="robot_1"/>
+  <arg name="odom_topic" default="/robot_1/odom" />
   
     <node pkg="move_base" type="move_base" respawn="false" name="move_base_node" output="screen">
             <param name="footprint_padding" value="0.01" />
