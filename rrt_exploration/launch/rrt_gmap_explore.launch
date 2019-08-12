@@ -17,7 +17,7 @@
     <!-- include file="$(find realsense2_camera)/launch/rs_camera.launch"/ -->
     
   </group> 
-  
+  <include file="$(find turtlebot3_navigation)/launch/move_base_debug.launch"/>
   
   <!-- RRT Exploration setup launch -->
   <include file="$(find rrt_exploration)/launch/rrt_setup.launch"/>
