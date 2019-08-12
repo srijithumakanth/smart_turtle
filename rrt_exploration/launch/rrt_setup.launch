@@ -17,7 +17,7 @@
   <param name="eta" value="$(arg eta)"/>
   <param name="map_topic" value="$(arg Map)"/>
   <!-- param name="robot_frame" value="$(arg namespace)/base_footprint"/ -->
-  <param name="robot_frame" value="$(arg namespace)/base_link"/>
+  <param name="robot_frame" value="$(arg namespace)/base_footprint"/>
   </node>
  
   
