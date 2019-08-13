@@ -41,6 +41,9 @@
       <param name="lasamplerange" value="0.005"/>
       <param name="lasamplestep" value="0.005"/>
       <param name="minimumScore" value="0.005"/>
+
+      <param name="occ_thresh" value="0.5"/>
+
     </node>
   </group>
 
