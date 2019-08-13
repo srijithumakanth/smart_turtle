@@ -104,49 +104,34 @@ std::vector<float> xi=xnear;
 char obs=0; 
 char unk=0;
 char test = 0;
- 
-//geometry_msgs::Point p;
-//for (int c=0;(c < stepz) && (test != 1);c++)
+
+ROS_DEBUG("%d", stepz);
+
 int c = 0;
 while(c < stepz)
 {
-   xi=Steer(xi,xnew,rez);     		
+  xi=Steer(xi,xnew,rez);     		
 
 
   int grid = gridValue(mapsub,xi);
 
   if(grid == 100)
-    obs = 1;
+  {
+      obs = 1;
+  }
 
   if(grid  < 0)
+  {
     return -1;
+  }
 
   c++;
-
-
-
-
-  /*if (gridValue(mapsub,xi) ==100)
-  {
-     obs=1; 
-  }
-  if (gridValue(mapsub,xi) ==-1)
-  {      
-     unk=1;
-     test = 1;
-     //break;
-     //throw 1;
-  }
-
-  if(c < stepz)
-    test =1 ;
-
-  c++;*/
-
 }
 
   if(obs == 1 )
+  {
     return 1;
+  }
 
 
   return 0;
