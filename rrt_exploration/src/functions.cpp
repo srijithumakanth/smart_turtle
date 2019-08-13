@@ -108,11 +108,25 @@ char test = 0;
 //geometry_msgs::Point p;
 //for (int c=0;(c < stepz) && (test != 1);c++)
 int c = 0;
-while(test == 0)
+while(c < stepz)
 {
    xi=Steer(xi,xnew,rez);     		
 
-  if (gridValue(mapsub,xi) ==100)
+
+  int grid = gridValue(mapsub,xi);
+
+  if(grid == 100)
+    obs = 1;
+
+  if(grid == -1 )
+    return -1;
+
+  c++;
+
+
+
+
+  /*if (gridValue(mapsub,xi) ==100)
   {
      obs=1; 
   }
@@ -127,27 +141,15 @@ while(test == 0)
   if(c < stepz)
     test =1 ;
 
-  c++;
+  c++;*/
 
 }
-char out=0;
-xnew=xi;
-  if (unk==1)
-  {
-    out=-1;
-  }
-    
-  if (obs==1)
-  {  
-    out=0;
-  }
-      
-  if ((obs!=1 ) && (unk!=1))
-  {
-      out=1;
-  }
 
-  return out;
+  if(obs == 1 )
+    return 1;
+
+
+  return 0;
  
 
 }
