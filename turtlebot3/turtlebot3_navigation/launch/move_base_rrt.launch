@@ -38,7 +38,7 @@
     
     <!-- ##################################################################### -->
     
-    <arg name="namespace"/>
+    <arg name="namespace" value="robot_1"/>
     
     <!-- gmapping launch -->
 
