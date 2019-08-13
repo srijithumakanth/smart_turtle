@@ -2,13 +2,14 @@
 
 
 <!-- gmapping launch -->
+  <group ns="/robot_1">
 
     <node pkg="gmapping" type="slam_gmapping" name="gmap_slam" output="screen">
       
-      <param name="scan" value="/scan"/>
-      <param name="map_frame" value="map"/>
-      <param name="odom_frame" value="odom"/>
-      <param name="base_frame" value="base_footprint"/>
+      <param name="scan" value="/robot_1/scan"/>
+      <param name="map_frame" value="robot_1/map"/>
+      <param name="odom_frame" value="robot_1/odom"/>
+      <param name="base_frame" value="robot_1/base_footprint"/>
       
       <param name="map_update_interval" value="2.0"/>
       <param name="maxUrange" value="50.0"/>
@@ -41,5 +42,6 @@
       <param name="lasamplestep" value="0.005"/>
       <param name="minimumScore" value="0.005"/>
     </node>
+  </group>
 
 </launch>
