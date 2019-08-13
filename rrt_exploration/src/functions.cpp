@@ -118,7 +118,7 @@ while(c < stepz)
   if(grid == 100)
     obs = 1;
 
-  if(grid == -1 )
+  if(grid  < 0)
     return -1;
 
   c++;
