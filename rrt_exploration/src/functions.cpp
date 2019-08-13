@@ -88,6 +88,7 @@ std::vector<signed char> Data=mapData.data;
 float indx=(  floor((Xp[1]-Xstarty)/resolution)*width)+( floor((Xp[0]-Xstartx)/resolution) );
 int out;
 out=Data[int(indx)];
+ROS_INFO("MAP DATA %F", indx);
 return out;
 }
 
@@ -103,21 +104,27 @@ std::vector<float> xi=xnear;
 char  obs=0; char unk=0;
  
 geometry_msgs::Point p;
-for (int c=0;c<stepz;c++){
-  xi=Steer(xi,xnew,rez);
-  		
+for (int c=0;c<stepz;c++)
+{
+   xi=Steer(xi,xnew,rez);     		
 
-   if (gridValue(mapsub,xi) ==100){     obs=1; }
-   
-   if (gridValue(mapsub,xi) ==-1){      unk=1;	break;}
+  if (gridValue(mapsub,xi) ==100)
+  {
+     obs=1; 
   }
+  if (gridValue(mapsub,xi) ==-1)
+  {      
+     unk=1;
+     break;
+  }
+}
 char out=0;
  xnew=xi;
  if (unk==1){  out=-1;}
  	
  if (obs==1){  out=0;}
  		
- if (obs!=1 && unk!=1){   out=1;}
+ if ((obs!=1 ) && (unk!=1)){   out=1;}
 
  
  
