@@ -212,7 +212,7 @@ x_new=Steer(x_nearest,x_rand,eta);
 
 
 // ObstacleFree    1:free     -1:unkown (frontier region)      0:obstacle
-char   checking=ObstacleFree(x_nearest,x_new,mapData);
+signed char   checking=ObstacleFree(x_nearest,x_new,mapData);
 
 	ROS_INFO("%d", (int)checking);
 
