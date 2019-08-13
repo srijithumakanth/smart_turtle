@@ -88,7 +88,7 @@ std::vector<signed char> Data=mapData.data;
 float indx=(  floor((Xp[1]-Xstarty)/resolution)*width)+( floor((Xp[0]-Xstartx)/resolution) );
 int out;
 out=Data[int(indx)];
-ROS_INFO("MAP DATA %F %d", indx,out);
+//ROS_INFO("MAP DATA %F %d", indx,out);
 return out;
 }
 
