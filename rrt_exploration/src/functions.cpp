@@ -118,6 +118,7 @@ for (int c=0;(c<stepz) && (test == 0);c++)
      unk=1;
      test = 1;
      //break;
+     throw 1;
   }
 }
 char out=0;
