@@ -105,7 +105,7 @@ char obs=0;
 char unk=0;
 char test = 0;
 
-ROS_DEBUG("%d", stepz);
+ROS_INFO("%d", stepz);
 
 int c = 0;
 while(c < stepz)
