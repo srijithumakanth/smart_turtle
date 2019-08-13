@@ -214,6 +214,9 @@ x_new=Steer(x_nearest,x_rand,eta);
 // ObstacleFree    1:free     -1:unkown (frontier region)      0:obstacle
 char   checking=ObstacleFree(x_nearest,x_new,mapData);
 
+	ROS_INFO("%d", (int)checking);
+
+
 	  if (checking==-1){
           	exploration_goal.header.stamp=ros::Time(0);
           	exploration_goal.header.frame_id=mapData.header.frame_id;
@@ -228,6 +231,7 @@ char   checking=ObstacleFree(x_nearest,x_new,mapData);
 			ROS_INFO("I'm in frontier section");
           	targetspub.publish(exploration_goal);
 		  	points.points.clear();
+			
         	
         	}
 	  	
