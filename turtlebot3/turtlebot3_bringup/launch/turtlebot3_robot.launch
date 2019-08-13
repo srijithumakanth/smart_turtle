@@ -1,5 +1,5 @@
 <launch>
-  <!-- group ns="/robot_1" -->
+  <group ns="/robot_1">
     
     <arg name="multi_robot_name" default="robot_1"/>
     
@@ -16,6 +16,6 @@
     
     <node pkg="turtlebot3_bringup" type="turtlebot3_diagnostics" name="turtlebot3_diagnostics" output="screen"/>
   
-  <!-- /group -->
+  </group>
     <!-- node pkg="turtlebot3_bringup" type="turtlebot3_diagnostics" name="turtlebot3_diagnostics" output="screen"/ -->
 </launch>
