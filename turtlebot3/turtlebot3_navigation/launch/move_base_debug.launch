@@ -7,7 +7,7 @@
 
     <param name="use_sim_time" value="false" />
 
-    <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen" >
+    <!-- <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen" >
       <remap from="scan" to="$(arg namespace)/base_scan"/>
       <param name="map_frame" value="$(arg namespace)/map"/>
       <param name="odom_frame" value="$(arg namespace)/odom"/>
@@ -42,7 +42,7 @@
       <param name="lasamplerange" value="0.005"/>
       <param name="lasamplestep" value="0.005"/>
       <param name="minimumScore" value="0.005"/>
-    </node>
+    </node> -->
 
 
     <node pkg="move_base" type="move_base" respawn="false" name="move_base_node" output="screen">
