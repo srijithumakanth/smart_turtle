@@ -7,8 +7,8 @@ map_type: costmap
 
 #Set the tolerance we're willing to have for tf transforms
 transform_tolerance: 2.0
-obstacle_range: 3.5
-raytrace_range: 4.0
+obstacle_range: 3.0 #3.5
+raytrace_range: 3.5 #4.0
 
 #footprint: [[-0.127, -0.127], [-0.18, 0.0], [-0.127, 0.127], [0.0, 0.18], [0.127, 0.127], [0.18, 0.0], [0.127, -0.127], [0.0, -0.18]]
 footprint: [[-0.105, -0.105], [-0.105, 0.105], [0.041, 0.105], [0.041, -0.105]]
@@ -19,7 +19,7 @@ footprint_padding: 0.03
 
 #Cost function parameters
 inflation_radius: 0.55
-cost_scaling_factor: 10.0
+cost_scaling_factor: 3.0 #10.0
 
 #The cost at which a cell is considered an obstacle when a map is read from the map_server
 lethal_cost_threshold: 100
