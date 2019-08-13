@@ -99,7 +99,7 @@ return out;
 
 char ObstacleFree(std::vector<float> xnear, std::vector<float> &xnew, nav_msgs::OccupancyGrid mapsub){
 float rez=float(mapsub.info.resolution)*.2;
-float stepz=int(ceil(Norm(xnew,xnear))/rez); 
+int stepz=int(ceil(Norm(xnew,xnear))/rez); 
 std::vector<float> xi=xnear;
 char obs=0; 
 char unk=0;
