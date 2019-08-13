@@ -243,7 +243,7 @@ char   checking=ObstacleFree(x_nearest,x_new,mapData);
 		p.y=x_nearest[1]; 
 		p.z=0.0;
 	 	line.points.push_back(p);
-		ROS_INFO("I'm in free section")
+		ROS_INFO("I'm in free section");
 
 	        }
 
