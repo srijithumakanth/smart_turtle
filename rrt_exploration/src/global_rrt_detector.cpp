@@ -214,7 +214,7 @@ x_new=Steer(x_nearest,x_rand,eta);
 // ObstacleFree    1:free     -1:unkown (frontier region)      0:obstacle
 signed char   checking=ObstacleFree(x_nearest,x_new,mapData);
 
-	ROS_INFO("%d", (int)checking);
+	//ROS_INFO("%d", (int)checking);
 
 
 	  if (checking==-1){
@@ -228,7 +228,7 @@ signed char   checking=ObstacleFree(x_nearest,x_new,mapData);
 			p.z=0.0;
           	points.points.push_back(p);
           	pub.publish(points) ;
-			ROS_INFO("I'm in frontier section");
+			//ROS_INFO("I'm in frontier section");
           	targetspub.publish(exploration_goal);
 		  	points.points.clear();
 			
