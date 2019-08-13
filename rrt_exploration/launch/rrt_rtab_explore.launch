@@ -20,11 +20,11 @@
     <include file="$(find turtlebot3_navigation)/launch/move_base_rrt_rtab.launch">
         <arg name="namespace" value="robot_1"/>
      </include> 
-     
+
   </group>
 
   <!-- RRT Exploration setup launch -->
-  <include file="$(find rrt_exploration)/launch/rrt_setup.launch"/>
+  <!-- include file="$(find rrt_exploration)/launch/rrt_setup.launch"/ -->
 
 </launch>
 
