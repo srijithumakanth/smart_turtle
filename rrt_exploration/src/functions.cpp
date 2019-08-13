@@ -102,9 +102,10 @@ float rez=float(mapsub.info.resolution)*.2;
 float stepz=int(ceil(Norm(xnew,xnear))/rez); 
 std::vector<float> xi=xnear;
 char  obs=0; char unk=0;
+char test = 0;
  
 geometry_msgs::Point p;
-for (int c=0;c<stepz;c++)
+for (int c=0;(c<stepz) && (test == 0);c++)
 {
    xi=Steer(xi,xnew,rez);     		
 
@@ -115,7 +116,8 @@ for (int c=0;c<stepz;c++)
   if (gridValue(mapsub,xi) ==-1)
   {      
      unk=1;
-     break;
+     test = 1;
+     //break;
   }
 }
 char out=0;

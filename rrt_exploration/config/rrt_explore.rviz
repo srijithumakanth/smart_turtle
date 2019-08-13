@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Map1
       Splitter Ratio: 0.5
     Tree Height: 745
   - Class: rviz/Selection
@@ -26,7 +27,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: ""
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -105,7 +106,7 @@ Visualization Manager:
       Draw Behind: false
       Enabled: true
       Name: Map
-      Topic: /map
+      Topic: /robot_1/map
       Unreliable: false
       Use Timestamp: false
       Value: true
@@ -218,7 +219,7 @@ Visualization Manager:
       Marker Topic: /global_detector_shapes
       Name: Global detector shapes
       Namespaces:
-        markers: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/Marker
@@ -226,14 +227,14 @@ Visualization Manager:
       Marker Topic: /local_detector_shapes
       Name: Local detector shapes
       Namespaces:
-        markers: true
+        {}
       Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: map
+    Fixed Frame: robot_1/map
     Frame Rate: 30
   Name: root
   Tools:
@@ -261,18 +262,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.22224009
-        Y: -0.150467858
-        Z: 0.263544321
+        X: 0.617684662
+        Y: 0.829251528
+        Z: 0.230604857
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.3153975
+      Pitch: 1.50039661
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.700398088
+      Yaw: 0.43539834
     Saved: ~
 Window Geometry:
   Displays:
