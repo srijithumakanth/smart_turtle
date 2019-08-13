@@ -53,7 +53,7 @@
       <param name="oscillation_distance" value="0.5" />
       <param name="planner_patience" value="1" />
       <param name="controller_patience" value="1" /> 
-      <remap from="cmd_vel" to="$(arg namespace)/cmd_vel"/>
+      <remap from="cmd_vel" to="/$(arg namespace)/cmd_vel"/>
       <param name="recovery_behavior_enabled" value="false" />
       <rosparam file="$(find rrt_exploration)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
       <rosparam file="$(find rrt_exploration)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
@@ -62,13 +62,13 @@
       <rosparam file="$(find rrt_exploration)/param/base_local_planner_params.yaml" command="load" />  
       <param name="global_costmap/global_frame" value="$(arg namespace)/map"/>
       <param name="global_costmap/robot_base_frame" value="$(arg namespace)/base_link"/>
-      <param name="global_costmap/laser_scan_sensor/sensor_frame" value="/$(arg namespace)/base_laser_link"/>
-      <param name="global_costmap/laser_scan_sensor/topic" value="/$(arg namespace)/base_scan"/>    
+      <param name="global_costmap/laser_scan_sensor/sensor_frame" value="/$(arg namespace)/base_scan"/>
+      <param name="global_costmap/laser_scan_sensor/topic" value="/$(arg namespace)/scan"/>    
       <param name="local_costmap/global_frame" value="$(arg namespace)/odom"/>
       <param name="local_costmap/robot_base_frame" value="$(arg namespace)/base_link"/>
-      <param name="local_costmap/laser_scan_sensor/sensor_frame" value="$(arg namespace)/base_laser_link"/>
-      <param name="local_costmap/laser_scan_sensor/topic" value="/$(arg namespace)/base_scan"/>
-      <param name="local_costmap/obstacle_layer/laser_scan_sensor/topic" value="/$(arg namespace)/base_scan"/>
+      <param name="local_costmap/laser_scan_sensor/sensor_frame" value="$(arg namespace)/base_scan"/>
+      <param name="local_costmap/laser_scan_sensor/topic" value="/$(arg namespace)/scan"/>
+      <param name="local_costmap/obstacle_layer/laser_scan_sensor/topic" value="/$(arg namespace)/scan"/>
     </node>
 
 </launch>
