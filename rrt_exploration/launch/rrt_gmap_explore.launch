@@ -15,6 +15,6 @@
   <include file="$(find turtlebot3_navigation)/launch/gmapping.launch"/>
   
   <!-- RRT Exploration setup launch -->
-  <include file="$(find rrt_exploration)/launch/rrt_setup.launch"/ -->
+  <include file="$(find rrt_exploration)/launch/rrt_setup.launch"/>
   
 </launch>
