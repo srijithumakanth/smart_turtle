@@ -11,7 +11,7 @@
       <param name="odom_frame" value="robot_1/odom"/>
       <param name="base_frame" value="robot_1/base_footprint"/>
       
-      <param name="map_update_interval" value="2.0"/>
+      <!-- <param name="map_update_interval" value="2.0"/>
       <param name="maxUrange" value="50.0"/>
       <param name="maxRange" value="50.0"/>
       <param name="sigma" value="0.05"/>
@@ -40,7 +40,7 @@
       <param name="llsamplestep" value="0.01"/>
       <param name="lasamplerange" value="0.005"/>
       <param name="lasamplestep" value="0.005"/>
-      <param name="minimumScore" value="0.005"/>
+      <param name="minimumScore" value="0.005"/> -->
     </node>
   </group>
 
