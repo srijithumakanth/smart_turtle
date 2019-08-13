@@ -101,11 +101,14 @@ char ObstacleFree(std::vector<float> xnear, std::vector<float> &xnew, nav_msgs::
 float rez=float(mapsub.info.resolution)*.2;
 float stepz=int(ceil(Norm(xnew,xnear))/rez); 
 std::vector<float> xi=xnear;
-char  obs=0; char unk=0;
+char obs=0; 
+char unk=0;
 char test = 0;
  
-geometry_msgs::Point p;
-for (int c=0;(c<stepz) && (test == 0);c++)
+//geometry_msgs::Point p;
+//for (int c=0;(c < stepz) && (test != 1);c++)
+int c = 0;
+while(test == 0)
 {
    xi=Steer(xi,xnew,rez);     		
 
@@ -118,24 +121,36 @@ for (int c=0;(c<stepz) && (test == 0);c++)
      unk=1;
      test = 1;
      //break;
-     throw 1;
+     //throw 1;
   }
+
+  if(c < stepz)
+    test =1 ;
+
+  c++;
+
 }
 char out=0;
- xnew=xi;
- if (unk==1){  out=-1;}
- 	
- if (obs==1){  out=0;}
- 		
- if ((obs!=1 ) && (unk!=1)){   out=1;}
+xnew=xi;
+  if (unk==1)
+  {
+    out=-1;
+  }
+    
+  if (obs==1)
+  {  
+    out=0;
+  }
+      
+  if ((obs!=1 ) && (unk!=1))
+  {
+      out=1;
+  }
 
- 
- 
- 
- return out;
+  return out;
  
 
- }
+}
  
 
 
