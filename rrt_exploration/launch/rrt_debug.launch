@@ -21,7 +21,7 @@
   </node>
  
   
-  <node pkg="rrt_exploration" type="filter.py" name="filter" output="screen">
+  <!-- <node pkg="rrt_exploration" type="filter.py" name="filter" output="screen">
   <param name="map_topic" value="$(arg Map)"/>
   <param name="info_radius" value="1"/> 
   <param name="costmap_clearing_threshold" value="70"/> 
@@ -31,8 +31,8 @@
   <param name="n_robots" value="1"/>
   <param name="rate" value="100"/>
   </node>
-  
-  <node pkg="rrt_exploration" type="assigner.py" name="assigner" output="screen">
+   -->
+  <!-- <node pkg="rrt_exploration" type="assigner.py" name="assigner" output="screen">
   <param name="map_topic" value="$(arg Map)"/>
   <param name="global_frame" value="$(arg Map)"/>
   <param name="info_radius" value="1"/> 
@@ -45,7 +45,7 @@
   <param name="namespace" value=""/>
   <param name="delay_after_assignement" value="0.5"/>
   <param name="rate" value="100"/>
-  </node>
+  </node> -->
   
 </launch>
 
